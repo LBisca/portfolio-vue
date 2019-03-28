@@ -1,28 +1,64 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Nav v-bind:active="isMenuActive" v-bind:toggleMenu="toggleMenu"/>
+    <div class="wrapper" v-bind:class="{active: isMenuActive}">
+      <Header/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+import Nav from "./components/Nav.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    Header,
+    Nav
+  },
+  data() {
+    return { isMenuActive: false };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuActive = !this.isMenuActive;
+    }
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html,
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  overflow: hidden;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.wrapper {
+  transition: 0.3s ease-in-out;
+  &.active {
+    margin-left: 275px;
+    /* width: calc(100% - 275px); */
+  }
 }
 </style>
