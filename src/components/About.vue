@@ -12,7 +12,7 @@
 
         <ul>
           <li>
-            <strong>Name :&nbsp;</strong>
+            <strong>Name :&nbsp;</strong> Ricardo Milos
           </li>
           <li>
             <strong>Age :&nbsp;</strong>
@@ -80,12 +80,15 @@ export default {};
   }
 
   ul {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
   }
 
   li {
-    display: flex;
-    flex-direction: column;
     border-bottom: 1px solid $light-grey;
+    padding: 10px 0px;
 
     &:last-child {
       border-bottom: none;

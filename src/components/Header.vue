@@ -17,7 +17,7 @@ export default {
   display: flex;
   justify-content: center;
   transition: 0.3s;
-  min-height: 50vh;
+  min-height: 30vh;
   width: 100%;
   background-color: $purple;
   color: white;
