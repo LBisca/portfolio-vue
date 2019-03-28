@@ -3,19 +3,24 @@
     <Nav v-bind:active="isMenuActive" v-bind:toggleMenu="toggleMenu"/>
     <div class="wrapper" v-bind:class="{active: isMenuActive}">
       <Header/>
+      <div class="container">
+        <About/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import About from "./components/About.vue";
 import Nav from "./components/Nav.vue";
 
 export default {
   name: "app",
   components: {
     Header,
-    Nav
+    Nav,
+    About
   },
   data() {
     return { isMenuActive: false };
@@ -38,7 +43,8 @@ html,
 body {
   font-family: "Raleway", sans-serif;
   font-size: 1em;
-  overflow: hidden;
+  color: $default-text;
+  overflow-x: hidden;
 }
 
 html {
@@ -60,5 +66,10 @@ html {
     margin-left: 275px;
     /* width: calc(100% - 275px); */
   }
+}
+
+.container {
+  margin-left: 110px;
+  margin-top: 80px;
 }
 </style>

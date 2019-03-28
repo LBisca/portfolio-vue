@@ -8,21 +8,23 @@
     <nav class="nav" v-bind:class="{active: active}">
       <div class="user-area"></div>
       <h1 style="display: none">Navigation</h1>
-      <h2>
-        <a href="#">Home</a>
-      </h2>
-      <h2>
-        <a href>About me</a>
-      </h2>
-      <h2>
-        <a href>Work Experience</a>
-      </h2>
-      <h2>
-        <a href>Portfolio</a>
-      </h2>
-      <h2>
-        <a href>Contacts</a>
-      </h2>
+      <div class="navigation-list">
+        <h2>
+          <a href="#">Home</a>
+        </h2>
+        <h2>
+          <a href>About me</a>
+        </h2>
+        <h2>
+          <a href>Work Experience</a>
+        </h2>
+        <h2>
+          <a href>Portfolio</a>
+        </h2>
+        <h2>
+          <a href>Contacts</a>
+        </h2>
+      </div>
     </nav>
   </div>
 </template>
@@ -49,17 +51,9 @@ export default {
   transition: 0.3s ease-in-out;
   width: 275px;
 
-  h2 {
-    padding: 15px 0px 15px 30px;
-    border-top: 1px solid $dark-blue;
-
-    &:last-child {
-      border-bottom: 1px solid $dark-blue;
-    }
-  }
-
   a {
     color: white;
+    font-weight: 400;
     text-decoration: none;
     transition: 0.3s color;
 
@@ -71,6 +65,15 @@ export default {
   &.active {
     left: 0px;
   }
+}
+
+.navigation-list {
+  h2 {
+    padding: 15px 0px 15px 30px;
+    border-top: 1px solid $dark-blue;
+    box-shadow: 0px 2px rgba(20, 20, 20, 0.2);
+  }
+  box-shadow: 0px 1px rgba(20, 20, 20, 0.4);
 }
 
 .user-area {
@@ -111,6 +114,8 @@ export default {
   }
 
   &.active {
+    position: fixed;
+
     :nth-child(1) {
       transform: translateY(6px) rotate(45deg);
 
