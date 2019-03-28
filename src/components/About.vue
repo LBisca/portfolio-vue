@@ -7,9 +7,7 @@
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           In non quam lobortis, consequat purus ac, mollis turpis.
-          Praesent et ullamcorper mauris, nec ornare purus. Aenean vel laoreet odio.
-          Curabitur justo leo, lacinia eu odio sit amet, aliquet maximus est.
-          Praesent sed luctus magna. Aenean ut maximus sapien, quis vehicula enim.
+          Praesent et ullamcorper mauris, nec ornare purus.
         </p>
 
         <ul>
@@ -62,18 +60,26 @@ export default {};
 
 .about-flex {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
+  width: 100%;
 }
 
 .flex-item {
   flex: 1 1 0;
 
   &:nth-child(1) {
+    max-width: 505px;
     padding-top: 40px;
+    margin-right: 20px;
+  }
+
+  &:nth-child(2) {
+    max-width: 500px;
+    margin-left: 20px;
   }
 
   ul {
-    background-color: $list-background;
   }
 
   li {
@@ -88,10 +94,10 @@ export default {};
 }
 
 .photo-container {
+  width: 100%;
   height: 465px;
   min-height: 465px;
   background-color: $purple;
-  margin: 0px 50px 50px;
 }
 </style>
 

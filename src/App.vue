@@ -3,7 +3,7 @@
     <Nav v-bind:active="isMenuActive" v-bind:toggleMenu="toggleMenu"/>
     <div class="wrapper" v-bind:class="{active: isMenuActive}">
       <Header/>
-      <div class="container">
+      <div class="container" v-bind:class="{active: isMenuActive}">
         <About/>
       </div>
     </div>
@@ -45,6 +45,7 @@ body {
   font-size: 1em;
   color: $default-text;
   overflow-x: hidden;
+  background: #f1f2f4;
 }
 
 html {
@@ -69,7 +70,14 @@ html {
 }
 
 .container {
+  transition: 0.3s ease-in-out margin;
   margin-left: 110px;
+  margin-right: 110px;
   margin-top: 80px;
+
+  &.active {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
 }
 </style>
