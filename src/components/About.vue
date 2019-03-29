@@ -15,16 +15,16 @@
             <strong>Name :&nbsp;</strong> Ricardo Milos
           </li>
           <li>
-            <strong>Age :&nbsp;</strong>
+            <strong>Age :&nbsp;</strong> 300
           </li>
           <li>
-            <strong>Email :&nbsp;</strong>
+            <strong>Email :&nbsp;</strong> ricardo_milos@gooogle.com
           </li>
           <li>
-            <strong>Web :&nbsp;</strong>
+            <strong>Web :&nbsp;</strong> ricardomilos.com
           </li>
           <li>
-            <strong>Address :&nbsp;</strong>
+            <strong>Address :&nbsp;</strong> Brasil
           </li>
         </ul>
       </div>
@@ -88,7 +88,7 @@ export default {};
 
   li {
     border-bottom: 1px solid $light-grey;
-    padding: 10px 0px;
+    padding: 16px 0px;
 
     &:last-child {
       border-bottom: none;

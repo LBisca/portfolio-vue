@@ -81,6 +81,10 @@ export default {
   background: linear-gradient(to bottom, $purple 0%, #37485f 50%, $purple 100%);
   height: 220px;
   width: 100%;
+  background-image: url("../assets/images/Ricardo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header-container {
@@ -96,7 +100,7 @@ export default {
   height: 16px;
   justify-content: space-between;
   left: 15px;
-  position: absolute;
+  position: fixed;
   top: 15px;
   transform: scale(0.8);
   z-index: 2;
