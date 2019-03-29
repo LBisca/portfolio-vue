@@ -2,7 +2,8 @@
   <div class="text-box-wrapper" v-bind:class="side">
     <div class="text-box" v-bind:class="side">
       <h2>
-        <strong>Profession</strong>&nbsp;&nbsp;@Company
+        <strong>{{job}}</strong>
+        &nbsp;&nbsp;@{{company}}
       </h2>
       <span>Jan 2013 - Dec 2018</span>
       <p>
@@ -17,7 +18,9 @@
 <script>
 export default {
   props: {
-    side: String
+    side: String,
+    job: String,
+    company: String
   }
 };
 </script>

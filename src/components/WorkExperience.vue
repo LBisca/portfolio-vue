@@ -4,13 +4,27 @@
     <div class="underline"></div>
     <div class="work-wrapper">
       <div class="col1">
-        <TextBox side="right"/>
+        <div v-for="(item, index) in data">
+          <TextBox
+            v-if="index % 2 !== 0"
+            side="right"
+            v-bind:job="item.job"
+            v-bind:company="item.company"
+          />
+        </div>
       </div>
       <div class="col2">
         <TimeLine/>
       </div>
       <div class="col3">
-        <TextBox side="left"/>
+        <div v-for="(item, index) in data" v-bind:key="`exp-${index}`">
+          <TextBox
+            v-if="index % 2 === 0"
+            side="left"
+            v-bind:job="item.job"
+            v-bind:company="item.company"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -31,6 +45,12 @@ export default {
         {
           job: "Front-end",
           company: "Hive",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius in mi vel posuere. Nulla id turpis convallis, feugiat quam pellentesque, pretium ipsum. Donec vel est sed quam semper convallis."
+        },
+        {
+          job: "Front-end",
+          company: "Padaria",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius in mi vel posuere. Nulla id turpis convallis, feugiat quam pellentesque, pretium ipsum. Donec vel est sed quam semper convallis."
         }
