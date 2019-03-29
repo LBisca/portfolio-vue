@@ -5,6 +5,7 @@
       <span/>
       <span/>
     </div>
+
     <nav class="nav" v-bind:class="{active: active}">
       <div class="user-area"></div>
       <h1 style="display: none">Navigation</h1>
@@ -80,6 +81,12 @@ export default {
   background: linear-gradient(to bottom, $purple 0%, #37485f 50%, $purple 100%);
   height: 220px;
   width: 100%;
+}
+
+.header-container {
+  width: 100%;
+  background-color: $purple;
+  height: 60px;
 }
 
 .hamburger-menu {

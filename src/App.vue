@@ -5,6 +5,7 @@
       <Header/>
       <div class="container" v-bind:class="{active: isMenuActive}">
         <About/>
+        <WorkExperience/>
       </div>
     </div>
   </div>
@@ -12,15 +13,17 @@
 
 <script>
 import Header from "./components/Header.vue";
-import About from "./components/About.vue";
 import Nav from "./components/Nav.vue";
+import About from "./components/About.vue";
+import WorkExperience from "./components/WorkExperience.vue";
 
 export default {
   name: "app",
   components: {
     Header,
     Nav,
-    About
+    About,
+    WorkExperience
   },
   data() {
     return { isMenuActive: false };

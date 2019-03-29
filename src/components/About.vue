@@ -52,8 +52,8 @@ export default {};
 
 .underline {
   width: 60px;
-  height: 2px;
-  margin-top: 10px;
+  height: 3px;
+  margin-top: 5px;
   margin-bottom: 30px;
   background-color: $red;
 }
@@ -99,6 +99,7 @@ export default {};
 .photo-container {
   width: 100%;
   height: 465px;
+  max-width: 380px;
   min-height: 465px;
   background-color: $purple;
 }
