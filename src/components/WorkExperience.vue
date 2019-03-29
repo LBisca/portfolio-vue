@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="col2">
-        <TimeLine/>
+        <TimeLine v-bind:data="data"/>
       </div>
       <div class="col3">
         <div v-for="(item, index) in data" v-bind:key="`exp-${index}`">
@@ -47,8 +47,7 @@ export default {
         {
           job: "Front-end",
           company: "Hive",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius in mi vel posuere. Nulla id turpis convallis, feugiat quam pellentesque, pretium ipsum. Donec vel est sed quam semper convallis."
+          description: "Esse aqui é gay"
         },
         {
           job: "Front-end",
@@ -58,7 +57,7 @@ export default {
         },
         {
           job: "Front-end",
-          company: "Padaria",
+          company: "Esse é gay",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius in mi vel posuere. Nulla id turpis convallis, feugiat quam pellentesque, pretium ipsum. Donec vel est sed quam semper convallis."
         },

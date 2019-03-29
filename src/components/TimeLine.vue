@@ -14,8 +14,11 @@
 export default {
   data() {
     return {
-      itens: ["item1", "item2"]
+      itens: this.data
     };
+  },
+  props: {
+    data: Array
   }
 };
 </script>
