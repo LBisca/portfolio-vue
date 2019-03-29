@@ -20,7 +20,8 @@ export default {
   props: {
     side: String,
     job: String,
-    company: String
+    company: String,
+    marginTop: Object
   }
 };
 </script>

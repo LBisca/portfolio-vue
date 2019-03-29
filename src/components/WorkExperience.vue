@@ -10,6 +10,7 @@
             side="right"
             v-bind:job="item.job"
             v-bind:company="item.company"
+            v-bind:style="{marginTop:  130 + 'px'}"
           />
         </div>
       </div>
@@ -23,6 +24,7 @@
             side="left"
             v-bind:job="item.job"
             v-bind:company="item.company"
+            v-bind:style="[index > 0 ? {marginTop:  220 + 'px'} : {marginTop: 0 + 'px'}]"
           />
         </div>
       </div>
@@ -45,6 +47,18 @@ export default {
         {
           job: "Front-end",
           company: "Hive",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius in mi vel posuere. Nulla id turpis convallis, feugiat quam pellentesque, pretium ipsum. Donec vel est sed quam semper convallis."
+        },
+        {
+          job: "Front-end",
+          company: "Padaria",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius in mi vel posuere. Nulla id turpis convallis, feugiat quam pellentesque, pretium ipsum. Donec vel est sed quam semper convallis."
+        },
+        {
+          job: "Front-end",
+          company: "Padaria",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius in mi vel posuere. Nulla id turpis convallis, feugiat quam pellentesque, pretium ipsum. Donec vel est sed quam semper convallis."
         },
