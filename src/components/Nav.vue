@@ -81,7 +81,7 @@ export default {
   background: linear-gradient(to bottom, $purple 0%, #37485f 50%, $purple 100%);
   height: 220px;
   width: 100%;
-  /* background-image: url("../assets/images/Ricardo.jpg"); */
+  background-image: url("../assets/images/Ricardo.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
